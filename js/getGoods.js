@@ -44,8 +44,8 @@ const getGoods = function() {
 	     	localStorage.setItem('goods', JSON.stringify(array))
 
 	     	
-	     	if (window.location.pathname !== "/C:/openserver/domains/wildberris-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA/goods.html") {
-	     		window.location.href = "file:///C:/openserver/domains/wildberris-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA/goods.html#"
+	     	if (window.location.pathname !== "goods.html") {
+	     		window.location.href = "goods.html#"
 	     	} else {
 	     		renderGoods(array)
 	     	}
@@ -62,7 +62,7 @@ const getGoods = function() {
 		})
 	})
 
-	if (localStorage.getItem('goods') && window.location.pathname === "/C:/openserver/domains/wildberris-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA/goods.html" ){
+	if (localStorage.getItem('goods') && window.location.pathname === "goods.html" ){
 		renderGoods(JSON.parse(localStorage.getItem('goods')))
 
 	}
